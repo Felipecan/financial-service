@@ -1,6 +1,5 @@
 package com.example.FinancialService.services;
 
-import java.util.Map;
 
 import javax.annotation.PostConstruct;
 
@@ -16,8 +15,6 @@ import com.example.FinancialService.domain.FinancialOperation;
 import com.example.FinancialService.dto.BalanceDTO;
 import com.example.FinancialService.services.exceptions.ServiceComunicationException;
 import com.example.FinancialService.utils.Utils;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.Slf4j;
 
