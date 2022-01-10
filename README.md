@@ -24,7 +24,7 @@ Entretanto, nos casos onde é realizado um débito na conta, é necessário que 
 
 ![](./imgs/wallet.drawio.png)
 
-## endpoints:
+## Endpoints:
 
 1. /financial/operations/transfer/{fromAccountId}/to/{toAccountId}
    Endpoint responsável por realizar a transfência entre contas. fromAccountId se trata da conta de origem e toAccountId a conta de destino. Além disso, é necessário o envio do seguinte payload:
