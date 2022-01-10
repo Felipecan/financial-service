@@ -26,7 +26,7 @@ Entretanto, nos casos onde é realizado um débito na conta, é necessário que 
 
 ## Endpoints:
 
-1. /financial/operations/transfer/{fromAccountId}/to/{toAccountId}
+1. POST /financial/operations/transfer/{fromAccountId}/to/{toAccountId}
 
    Endpoint responsável por realizar a transfência entre contas. fromAccountId se trata da conta de origem e toAccountId a conta de destino. Além disso, é necessário o envio do seguinte payload:
    
@@ -39,7 +39,7 @@ Entretanto, nos casos onde é realizado um débito na conta, é necessário que 
    }
    ```
    
-2. /financial/operations/withdraw/from/{accountId}
+2. POST /financial/operations/withdraw/from/{accountId}
 
    Endpoint responsável por realizar o saque na conta. É necessário passar o accountId na URL, referente a conta que fará o saque. O payload abaixo também é requerido:
    
@@ -50,7 +50,7 @@ Entretanto, nos casos onde é realizado um débito na conta, é necessário que 
    }
    ```   
    
-3. /financial/operations/deposit/in/{accountId}
+3. POST /financial/operations/deposit/in/{accountId}
 
    Endpoint responsável por realizar o depósito na conta. É necessário passar o accountId na URL, referente a conta que fará e receberá o depósito. O payload abaixo também é requerido:
    
@@ -61,7 +61,7 @@ Entretanto, nos casos onde é realizado um débito na conta, é necessário que 
    }
    ```  
    
-4. /financial/operations/payment
+4. POST /financial/operations/payment
 
    Endpoint responsável por realizar o pagamento de contas. O payload abaixo é requerido:
    
@@ -73,12 +73,12 @@ Entretanto, nos casos onde é realizado um débito na conta, é necessário que 
    }
    ```  
    
-5. /financial/operations/{id}/account/{accoutId}
+5. GET /financial/operations/{id}/account/{accoutId}
 
 	Endpoint responsável por buscar uma operação específica para determinada conta. O campo id na URL se trata do id da operação e accountId o id da conta que a realizou.
 
 
-6. /financial/operations/from/{accountId}
+6. GET /financial/operations/from/{accountId}
 
 	Endpoint responsável por trazer todo histórico de movimentações financeiras realizada pela conta. O parâmetro accountId na URL se trata da conta que será consultada para realizar a busca do histórico.
    
