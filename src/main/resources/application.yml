@@ -1,3 +1,12 @@
+app:
+  name: FinancialService
+  services:
+    BalanceService:
+      name: BalanceService
+      host: http://localhost:8081
+    AccountService:
+      name: AccountService
+      host: http://localhost:8080
 server:
   port : 8090
 spring:
@@ -5,7 +14,7 @@ spring:
     driverClassName: org.postgresql.Driver
   datasource:
     plataform: postgres
-    url: jdbc:postgresql://localhost:5432/FinancialDatabase
+    url: jdbc:postgresql://localhost:5432/financial_database
     username: ad
     password: admin
   jpa:
@@ -16,3 +25,8 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
